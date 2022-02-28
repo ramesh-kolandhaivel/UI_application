@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Title-->
+    <title>Student Records</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body style="background-color: skyblue">
+<CENTER><h2>Student Records</h2></CENTER>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                 <h3>Add Student Details Form</h3>
+                    <div>
+                        <label>Name</label>
+                        <label class="validation-error hide" id="nameValidationError">This field is required</label>
+                        <input type="text" name="name" id="name" placeholder="Enter the Name">
+                    </div>
+                    <div>
+                        <label>Email Address</label>
+                        <label class="validation-error hide" id="mailValidationError">This field is required</label>
+                        <label class="validation-error hide" id="mailRegexValidationError">You have entered an invalid email address</label>
+                        <input type="text" name="mail" id="mail" placeholder="Enter the Email Address">
+                    </div>
+                    <div>
+                        <label>Message</label>
+                        <label class="validation-error hide" id="messageValidationError">This field is required</label>
+                        <input type="text" name="message" id="message" placeholder="Enter the Message">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="studentList" style="background-color: #C2976D;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email Address</th>
+                            <th>Message</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
